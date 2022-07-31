@@ -4,7 +4,7 @@
 
 - ## :eyeglasses: [abderox](https://github.com/abderox/)
 
-## :bookmark_tabs: __v1.0.3 __
+## :bookmark_tabs: __v1.0.6__
 #### :date: created : 31/July/2022
 <p align="center"><img src = "https://github.com/abderox/env-helper-cli/blob/master/env.easy.png" alt="logo"/></p>
 
@@ -16,6 +16,9 @@
 - __This version is just for learning purpose__ 
 - ``` install with npm command  ```
 - ``` env -h  ```
+- __USAGE example__ 
+- ```  env -c local ```
+- ```  env -d local ```
 - __Done__
 
 <img src = "https://github.com/abderox/env-helper-cli/blob/master/env.png" alt="capture" align="center"/>

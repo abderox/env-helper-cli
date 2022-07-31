@@ -103,7 +103,7 @@ const { argv } = yargs(process.argv).scriptName("env")
     })
     .option("o", {
         alias: "overwrite",
-        describe: "overwrite  env copy                   [env -c [name] -o]",
+        describe: "overwrite  env copy                   [env -o [name]]",
 
     })
     .option("h", {
