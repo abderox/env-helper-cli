@@ -1,7 +1,7 @@
 {
-  "name": "utils-cmd",
-  "version": "1.0.0",
-  "description": "random stuff like making a copy of .env to .env.example",
+  "name": "env-easy",
+  "version": "1.0.4",
+  "description": "commands to easily manipulate env files",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

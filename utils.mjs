@@ -248,5 +248,5 @@ else if (argv.h) {
     console.log("Try env -h to learn more")
 }
 else {
-    console.log("no args")
+    console.log("no argument was passed , try env -h to learn more")
 }
