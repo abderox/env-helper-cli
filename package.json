@@ -1,0 +1,23 @@
+{
+  "name": "utils-cmd",
+  "version": "1.0.0",
+  "description": "random stuff like making a copy of .env to .env.example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "env" :"./utils.mjs"
+  },
+  "keywords": [
+    "env",
+    "cli",
+    "cmd"
+  ],
+  "author": "Abdelhadi Mouzafir",
+  "license": "ISC",
+  "devDependencies": {
+    "fs": "^0.0.1-security",
+    "yargs": "^17.5.1"
+  }
+}
