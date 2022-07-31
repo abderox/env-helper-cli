@@ -61,7 +61,7 @@ function replaceAllwithEmpty(filepath) {
 
 
 const { argv } = yargs(process.argv).scriptName("env")
-    .usage("Usage: $0 -d [name] \n EX : .env.[name]")
+    .usage("Usage: $0 -d [name] \n File format : .env.[name]")
     .example(
         "$0 -c [name]"
 

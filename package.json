@@ -1,6 +1,6 @@
 {
   "name": "env-easy",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "commands to easily manipulate env files",
   "main": "index.js",
   "scripts": {
