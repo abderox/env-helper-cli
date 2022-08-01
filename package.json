@@ -1,13 +1,13 @@
 {
   "name": "env-easy",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "commands to easily manipulate env files",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "env" :"./utils.mjs"
+    "env": "./utils.mjs"
   },
   "keywords": [
     "env",
@@ -19,5 +19,8 @@
   "devDependencies": {
     "fs": "^0.0.1-security",
     "yargs": "^17.5.1"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1"
   }
 }
