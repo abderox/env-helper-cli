@@ -25,7 +25,8 @@
 - ```  env -r local --str ``` this will wipe out all digits values and strings will be kept [PORT = 4000] ==> [PORT = 4000]
 - ```  env -p local --dg ```  this will wipe out all strings values and digits will be kept [HOST = "localhost"] 
 ==> [HOST = "localhost"] 
-- ```  env -p local  ```      this will wipe out all values , empty variables 
+- ```  env -p local  ```       create fresh copy with empty variables 
+- ```  env -r local  ```       wipe out all values  of the variables including digits and strings  
 - ```  env -d local ```       this will delete file
 - ```  env -s local:SERVER_PORT ```       looks up for SERVER_PORT keyword in the in the file (if upper case write it in upper case)
 - ```  env -s :SERVER_PORT ```looks up for SERVER_PORT in .env file
