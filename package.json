@@ -1,6 +1,6 @@
 {
   "name": "env-easy",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "commands to easily manipulate env files",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,16 @@
   "keywords": [
     "env",
     "cli",
-    "cmd"
+    "cmd",
+    "enviroment",
+    "easy",
+    "simple",
+    "dotenv" ,
+    "node_modules",
+    "bin",
+    "nodejs",
+    "yargs"
+
   ],
   "author": "Abdelhadi Mouzafir",
   "repository": {

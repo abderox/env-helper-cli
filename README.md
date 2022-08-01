@@ -4,7 +4,7 @@
 
 - ## :eyeglasses: [abderox](https://github.com/abderox/)
 
-## :bookmark_tabs: __v1.1.0__
+## :bookmark_tabs: __v1.1.1__
 #### :date: created : 31/July/2022
 <p align="center"><img src = "https://github.com/abderox/env-helper-cli/blob/master/env.easy.png" alt="logo"/></p>
 
@@ -22,8 +22,8 @@
 - ``` env -h  ```
 - __USAGE examples__ 
 - ```  env -c local ```       this will create a copy of existing file or creating new one if not .
-- ```  env -r local --str ``` this will wipe out all digits values and strings will be kept [PORT = 4000] ==> [PORT = 4000]
-- ```  env -p local --dg ```  this will wipe out all strings values and digits will be kept [HOST = "localhost"] 
+- ```  env -r local --str ``` this will wipe out all digits values and strings will be kept [PORT = 4000] ==> [PORT = ]
+- ```  env -p local --dg ```  this will wipe out all strings values and digits will be kept [HOST = ""] 
 ==> [HOST = "localhost"] 
 - ```  env -p local  ```       create fresh copy with empty variables 
 - ```  env -r local  ```       wipe out all values  of the variables including digits and strings  
