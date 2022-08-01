@@ -91,7 +91,7 @@ function searchKeyword(filepath, keyword) {
 const { argv } = yargs(process.argv).scriptName("env")
     .usage(chalk.yellow("Usage: $0 -d [name] \nFile format : .env.[name]"))
     .example(
-        chalk.yellow("$0 -p [name] --digit"),
+        chalk.yellow("$0 -p [name] --dg"),
 
     )
     .option("e", {

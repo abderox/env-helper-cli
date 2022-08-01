@@ -4,7 +4,7 @@
 
 - ## :eyeglasses: [abderox](https://github.com/abderox/)
 
-## :bookmark_tabs: __v1.0.9__
+## :bookmark_tabs: __v1.1.0__
 #### :date: created : 31/July/2022
 <p align="center"><img src = "https://github.com/abderox/env-helper-cli/blob/master/env.easy.png" alt="logo"/></p>
 

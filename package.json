@@ -1,6 +1,6 @@
 {
   "name": "env-easy",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "commands to easily manipulate env files",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,9 @@
     "cmd"
   ],
   "author": "Abdelhadi Mouzafir",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abderox/env-helper-cli"},
   "license": "ISC",
   "devDependencies": {
     "fs": "^0.0.1-security",
