@@ -25,7 +25,7 @@
 - nothing omitted
 + now you can lookup a keyword and replace it by providing you with an interactive menu
 ```
-- __USAGE examples__ 
+- __Example__ 
 - ```  env -s local:8000 --rw 3000``` this basically will lookup the keyword and return multiple lines if more than one 
 
 <img src = "https://github.com/abderox/env-helper-cli/blob/master/env_3.png" alt="capture" align="center"/>
