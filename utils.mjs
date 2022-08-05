@@ -1,91 +1,13 @@
 #! /usr/bin/env node
+
+// * @author :  Abdelhadi Mouzafir
+// * @copyright : abderox
+// * @license :  ISC
+
 import yargs from 'yargs'
 import fs from 'fs'
 import chalk from 'chalk';
-
-
-function createFile(name) {
-    fs.writeFile(name, "", (err) => {
-        if (err) throw err;
-        console.log(name + ' was created successfully !');
-    });
-}
-const randomName = (length = 4) => {
-
-    let chars = 'abcdefghijklmnopqrstuvwxyz';
-    let str = '';
-    for (let i = 0; i < length; i++) {
-        str += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
-    return str;
-
-};
-
-function deleteFile(filepath) {
-    fs.rm(filepath, { recursive: false }, (err) => {
-        if (err) {
-            console.error(err.message);
-            return;
-        }
-        console.log(chalk.green("File deleted successfully"));
-    })
-}
-function deletefile_(filePath) {
-    process.stdout.write(chalk.red("Confirm deletion (y/n)? | default Yes"));
-    process.stdin.on("data", function (data) {
-        if (data.toString().trim() === "y")
-            deleteFile(filePath);
-        else if (data.toString().trim() === "n")
-            process.stdin.pause();
-        else
-            deleteFile(filePath);
-        process.stdin.pause();
-    });
-}
-
-function replaceAllwithEmpty(filepath, type = "all") {
-    try {
-        var data = fs.readFileSync(filepath, 'utf-8');
-
-        switch (type) {
-            case "string":
-                var newValue = data.replace(/'/g, `"`).replace(/([^"]\b\d+\b)/g, '');
-                break;
-            case "digit":
-                var newValue = data.replace(/'/g, `"`).replace(/"([^"]*)"/g, '""');
-                break;
-            case "all":
-                var newValue = data.replace(/'/g, `"`).replace(/"([^"]*)"/g, '""').replace(/(\b\d+\b)/g, '');
-
-                break;
-
-            default:
-                console.log("Invalid type");
-                break;
-        }
-
-        fs.truncate(filepath, 0, function () {
-            fs.writeFileSync(filepath, newValue, 'utf-8');
-        })
-
-        console.log(chalk.green('Now you have a spotless file '));
-    } catch (error) {
-        console.log(error)
-    }
-
-}
-
-function searchKeyword(filepath, keyword) {
-    let file = fs.readFileSync(filepath, "utf8");
-    let arr = file.split(/\r?\n/);
-    console.log(chalk.yellow("The keyword is found in the following lines:\n"));
-    arr.forEach((line, idx) => {
-        if (line.includes(keyword)) {
-            console.log("Line : " + (idx + 1) + ':' + chalk.green(line));
-        }
-    });
-    console.log(chalk.yellow("\nEnd of search"));
-}
+import  { randomName, createFile, deletefile_, replaceAllwithEmpty, searchKeyword, replaceAtindexLine, deleteFile } from './modules.mjs';
 
 
 const { argv } = yargs(process.argv).scriptName("env")
@@ -137,6 +59,10 @@ const { argv } = yargs(process.argv).scriptName("env")
     .option("s", {
         alias: "search",
         describe: "lookup for keyword in file          [env -s [name]:keyword] <[env -s :keyword] searches in .env file>\n",
+
+    })
+    .option("rw", {
+        describe: "lookup and replace keyword in a file    [use with -s]     <optional> [env -s [name]:keyword --rw new]  \n",
 
     })
     .option("dg", {
@@ -197,7 +123,7 @@ else if (argv.o) {
 }
 else if (argv.s) {
     try {
-  
+
         let filename = ""
         let keyword = ""
         let arg = argv.s;
@@ -206,9 +132,16 @@ else if (argv.s) {
             filename = argv.s.split(":")[0];
             keyword = argv.s.split(":")[1];
             filename = (filename === "" || filename === "env") ? ".env" : ".env." + filename.replace(".", "").replace("env", "");
-            console.log("Looking for " +keyword+" in file " + filename+" ...");
+            console.log("Looking for " + keyword + " in file " + filename + " ...");
             if (fs.existsSync(filename)) {
-                searchKeyword(filename, keyword)
+                if (argv.rw) {
+                    let newValue = argv.rw;
+                    replaceAtindexLine(filename, keyword, 0, newValue);
+                }
+                else {
+                    searchKeyword(filename, keyword);
+                }
+
             }
             else {
                 console.log(chalk.red("File not found"))

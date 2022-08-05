@@ -4,7 +4,7 @@
 
 - ## :eyeglasses: [abderox](https://github.com/abderox/)
 
-## :bookmark_tabs: __v1.1.2__
+## :bookmark_tabs: __v1.1.3__
 #### :date: created : 31/July/2022
 <p align="center"><img src = "https://github.com/abderox/env-helper-cli/blob/master/env.easy.png" alt="logo"/></p>
 
@@ -20,6 +20,18 @@
 - __This version is just for learning purpose__ 
 - ``` install with npm command  ```
 - ``` env -h  ```
+
+```diff
+- nothing omitted
++ now you can lookup a keyword and replace by providing you an interactive menu
+```
+- __USAGE examples__ 
+- ```  env -s local:8000 --rw 3000``` this basically will lookup the keyword and return multiple lines if more than one 
+
+<img src = "https://github.com/abderox/env-helper-cli/blob/master/env_3.png" alt="capture" align="center"/>
+
+
+
 - __USAGE examples__ 
 - ```  env -c local ```       this will create a copy of existing file or creating new one if not .
 - ```  env -r local --str ``` this will wipe out all digits values and strings will be kept [PORT = 4000] ==> [PORT = ]
