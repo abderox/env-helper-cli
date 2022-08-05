@@ -27,6 +27,7 @@
 ```
 - __Example__ 
 - ```  env -s local:8000 --rw 3000``` this basically will lookup the keyword and return multiple lines if more than one 
+- don't worry , as you see in the picture I didn't have to mention the filename since I was working with the default file which is ```.env``` no need to mention its name .
 
 <img src = "https://github.com/abderox/env-helper-cli/blob/master/env_3.png" alt="capture" align="center"/>
 
