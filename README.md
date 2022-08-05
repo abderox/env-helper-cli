@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/env-easy.svg)](https://badge.fury.io/js/env-easy)
 
-- ## :eyeglasses: [abderox](https://github.com/abderox/)
+# :eyeglasses: [abderox](https://github.com/abderox/)
 
 ## :bookmark_tabs: __v1.1.3__
 #### :date: created : 31/July/2022
