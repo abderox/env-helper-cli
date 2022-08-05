@@ -23,7 +23,7 @@
 
 ```diff
 - nothing omitted
-+ now you can lookup a keyword and replace by providing you an interactive menu
++ now you can lookup a keyword and replace it by providing you with an interactive menu
 ```
 - __USAGE examples__ 
 - ```  env -s local:8000 --rw 3000``` this basically will lookup the keyword and return multiple lines if more than one 
